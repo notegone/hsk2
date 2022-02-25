@@ -95,7 +95,7 @@
 			setProgress(r = 0);
 		}
 
-		document.getElementById("myButton").addEventListener("click", function() {
+		document.body.addEventListener("click", function() {
 			  randomIndex = Math.ceil((Math.random()*hsk2_rem.length-1));
 			  newText = hsk2_rem[randomIndex];
 			  newTextPinyin = hsk2_pinyin_rem[randomIndex];
@@ -116,7 +116,7 @@
 			  }
 			  else {hsk2_rem.splice(hsk2_rem[randomIndex],1); hsk2_pinyin_rem.splice(hsk2_rem[randomIndex],1); hsk2_def_rem.splice(hsk2_rem[randomIndex],1);}
             
-		});
+		}, true);
 	</script> 
   </body>
 </html>
