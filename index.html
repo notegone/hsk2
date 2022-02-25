@@ -14,23 +14,33 @@
 
 
 	<div class="container">
-
+        <br><br>
+		<div class="progress">
+			<div id="progressbar" class="progress-bar bg-secondary" role="progressbar"></div>
+		</div>
 		
 		<div id="myRandomDiv" class="container-fluid" style="font-size:100px">
 		</div>
 
 		<div id="myRandomPinyinDiv" class="container-fluid" style="font-size:50px">
 		</div>
-
-		<div id="myRandomDefDiv" class="container-fluid">
-
-		</div>
-		<br>
+		<br><br>
+		
 		<a id="myButton" class="btn btn-secondary" href="#" role="button">HSK2</a>
+		
+		<br><br>
+		
+		<ul class="list-group list-group-flush">
+		  <li class="list-group-item"><div id="myRandomDefDiv" ></div></li>
+		  <li class="list-group-item"><div id="myRandomDef2Div" ></div>	</li>
+		  <li class="list-group-item"><div id="myRandomDef3Div" ></div>	</li>
+		  <li class="list-group-item"><div id="myRandomDef4Div" ></div></li>
+		</ul>	
+		<br>
+
 		<br><br><br><br><br>
-		<div class="progress">
-			<div id="progressbar" class="progress-bar bg-secondary" role="progressbar"></div>
-		</div>
+
+
 	</div>
 
 
@@ -52,10 +62,15 @@
 	var hsk2 = ['阴', '每', '比', '自', '因', '瓜', '要', '足', '思', '跑', '丈', '路', '跳', '两', '息', '千', '孩', '为', '黑', '卖', '乐', '它', '完', '也', '弟', '宜', '雪', '张', '舞', '事', '船', '累', '汽', '场', '男', '色', '您', '踢', '得', '室', '情', '介', '从', '可', '右', '号', '司', '以', '件', '票', '非', '泳', '忙', '快', '病', '意', '身', '向', '蛋', '就', '吧', '休', '慢', '离', '送', '告', '洗', '员', '但', '体', '牛', '穿', '道', '咖', '教', '药', '懂', '白', '百', '鱼', '便', '哥', '斤', '让', '新', '旁', '旅', '诉', '红', '试', '早', '纸', '绍', '课', '经', '给', '题', '颜', '元', '边', '公', '考', '共', '过', '迎', '运', '近', '还', '房', '进', '远', '所', '笑', '手', '第', '唱', '找', '等', '答', '啡', '游', '肉', '备', '外', '夫', '晚', '准', '真', '晴', '错', '眼', '着', '报', '奶', '睛', '羊', '玩', '行', '长', '左', '已', '表', '篮', '班', '妹', '妻', '始', '别', '姓', '到', '次', '知', '希', '门', '歌', '问', '间', '帮', '正', '步', '常', '球', '最', '望', '床', '贵', '务', '动', '助', '鸡', '走']
     var hsk2_pinyin = ['yīn', 'měi', 'bǐ', 'zì', 'yīn', 'guā', 'yào', 'zú', 'sī', 'pǎo', 'zhàng', 'lù', 'tiào', 'liǎng', 'xī', 'qiān', 'hái', 'wèi', 'hēi', 'mài', 'lè', 'tā', 'wán', 'yě', 'dì', 'yí', 'xuě', 'zhāng', 'wǔ', 'shì', 'chuán', 'lèi', 'qì', 'cháng', 'nán', 'sè', 'nín', 'tī', 'dé', 'shì', 'qíng', 'jiè', 'cóng', 'kě', 'yòu', 'hào', 'sī', 'yǐ', 'jiàn', 'piào', 'fēi', 'yǒng', 'máng', 'kuài', 'bìng', 'yì', 'shēn', 'xiàng', 'dàn', 'jìu', 'ba', 'xīu', 'màn', 'lí', 'sòng', 'gào', 'xǐ', 'yuán', 'dàn', 'tǐ', 'níu', 'chuān', 'dào', 'kā', 'jiào', 'yào', 'dǒng', 'bái', 'bǎi', 'yú', 'biàn', 'gē', 'jīn', 'ràng', 'xīn', 'páng', 'lv̌', 'sù', 'hóng', 'shì', 'zǎo', 'zhǐ', 'shào', 'kè', 'jīng', 'gěi', 'tí', 'yán', 'yuán', 'biān', 'gōng', 'kǎo', 'gòng', 'guò', 'yíng', 'yùn', 'jìn', 'huán', 'fáng', 'jìn', 'yuǎn', 'suǒ', 'xiào', 'shǒu', 'dì', 'chàng', 'zhǎo', 'děng', 'dá', 'fēi', 'yóu', 'ròu', 'bèi', 'wài', 'fū', 'wǎn', 'zhǔn', 'zhēn', 'qíng', 'cuò', 'yǎn', 'zháo', 'bào', 'nǎi', 'jīng', 'yáng', 'wán', 'xíng', 'cháng', 'zuǒ', 'yǐ', 'biǎo', 'lán', 'bān', 'mèi', 'qī', 'shǐ', 'bié', 'xìng', 'dào', 'cì', 'zhī', 'xī', 'mén', 'gē', 'wèn', 'jiān', 'bāng', 'zhèng', 'bù', 'cháng', 'qíu', 'zùi', 'wàng', 'chuáng', 'gùi', 'wù', 'dòng', 'zhù', 'jī', 'zǒu']
     var hsk2_def = ['surname Yin', 'each', 'Belgium', 'self', 'old variant of 因[yin1]', 'melon', 'to demand', 'excessive', 'to think', '(of an animal) to paw (the ground)', 'measure of length, ten Chinese feet (3.3 m)', 'surname Lu', 'to jump', 'two', 'breath', 'thousand', 'child', 'as (in the capacity of)', 'abbr. for Heilongjiang province 黑龍江|黑龙江[Hei1 long2 jiang1]', 'to sell', 'surname Le', 'it', 'to finish', 'surname Ye', 'younger brother', 'surname Yi', 'surname Xue', 'surname Zhang', 'to dance', 'matter', 'variant of 船[chuan2]', 'to accumulate', 'steam', 'threshing floor', 'male', 'color', 'you (courteous, as opposed to informal 你[ni3])', 'to kick', 'to obtain', 'surname Shi', 'feeling', 'to introduce', 'surname Cong', 'can', 'right (-hand)', 'roar', 'surname Si', 'old variant of 以[yi3]', 'item', 'ticket', 'abbr. for 非洲[Fei1 zhou1], Africa', 'swimming', 'busy', 'rapid', 'illness', 'Italy', 'body', 'surname Xiang', 'variant of 蜑[Dan4]', 'at once', 'bar (loanword) (serving drinks, or providing Internet access etc)', 'surname Xiu', 'slow', 'mythical beast (archaic)', 'to deliver', 'to say', 'to wash', 'person', 'but', 'body', 'surname Niu', 'to wear', 'road', 'coffee', 'surname Jiao', 'leaf of the iris', 'to understand', 'surname Bai', 'surname Bai', 'surname Yu', 'plain', 'elder brother', 'catty', 'to yield', 'abbr. for Xinjiang 新疆[Xin1 jiang1] or Singapore 新加坡[Xin1 jia1 po1]', 'beside', 'n/a', 'variant of 訴|诉[su4]', 'surname Hong', 'to test', 'early', 'variant of 紙|纸[zhi3]', 'surname Shao', 'subject', 'surname Jing', 'to', 'surname Ti', 'surname Yan', 'surname Yuan', 'side', 'public', 'to beat', 'common', 'surname Guo', 'to welcome', 'to move', 'near', 'surname Huan', 'surname Fang', 'to go forward', 'far', 'actually', 'old variant of 笑[xiao4]', 'hand', '(prefix indicating ordinal number, e.g. first, number two etc)', 'to sing', 'to try to find', 'class', 'to answer', '(phonetic component)', 'surname You', 'meat', 'variant of 備|备[bei4]', 'outside', 'husband', 'evening', 'to allow', 'really', 'clear', 'surname Cuo', 'eye', '(chess) move', 'to announce', 'breast', 'eye', 'surname Yang', 'to play', 'row', 'length', 'surname Zuo', 'already', 'exterior surface', 'basket (receptacle)', 'surname Ban', 'younger sister', 'wife', 'to begin', 'surname Bie', 'family name', 'to (a place)', 'next in sequence', 'to know', 'to hope', 'surname Men', 'song', 'to ask', 'between', 'old variant of 幫|帮[bang1]', 'first month of the lunar year', 'surname Bu', 'surname Chang', 'ball', 'variant of 最[zui4]', 'full moon', 'bed', 'expensive', 'affair', '(of sth) to move', 'to help', 'fowl', 'to walk']
-
+    var hsk2_def2 = ['', 'every', 'Belgian', 'oneself', '', 'gourd', 'to request', '', 'to consider', '', 'to measure', '', 'to hop', 'both', 'news', '', '', 'to take sth as', '', 'to betray', '', '', 'to be over', '', 'junior male', '', '', '', 'to wield', 'thing', '', 'to involve or implicate (Taiwan pr. [lei4])', 'vapor', 'classifier for events and happenings: spell, episode, bout', 'Baron, lowest of five orders of nobility 五等爵位[wu3 deng3 jue2 wei4]', 'CL:種|种[zhong3]', '', 'to play (e.g. soccer)', 'to get', '', 'emotion', 'to lie between', '', 'may', 'the Right (politics)', 'cry', '', '', 'component', 'ballot', '', 'to swim', 'hurriedly', 'quick', 'CL:場|场[chang2]', 'Italian', 'life', '', '', 'right away', 'to puff (on a pipe etc)', '', '', '', 'to carry', 'to tell', 'to bathe', 'employee', 'yet', 'form', '', 'to put on', 'path', 'class', '', 'variant of 藥|药[yao4]', 'to comprehend', '', '', '', 'informal', '', '(PRC) weight equal to 500 g', 'to permit', 'surname Xin', 'one side', '', '', '', 'to try', 'morning', '', '', 'course', '', 'for', '', '', 'the Yuan or Mongol dynasty (1279-1368)', 'edge', 'collectively owned', 'to hit', 'general', '', 'to meet', 'to transport', 'close to', '', '', 'to advance', 'distant', 'place', '', '(formal) to hold', 'order', 'to call loudly', 'to look for', 'rank', 'to agree', '', '', 'flesh', '', 'in addition', 'man', 'night', 'to grant', 'truly', 'fine (weather)', '', 'small hole', 'trick', 'to inform', 'milk', 'eyeball', '', 'to have fun', 'line', 'long', '', 'to stop', 'family relationship via females', 'basket (in basketball)', '', '', '', 'to start', '', 'surname', 'until (a time)', 'second', 'to be aware', 'to admire', '', 'CL:支[zhi1],首[shou3]', '', 'among', '', '', '', '', 'sphere', '', 'to hope', 'couch', 'noble', 'business', 'to set in movement', 'to assist', 'chicken', 'to go']
+    var hsk2_def3 = ['', '', 'abbr. for 比利時|比利时[Bi3 li4 shi2]', 'from', '', 'squash', 'to coerce', '', '', '', 'husband', '', 'to skip over', 'some', 'interest (on an investment or loan)', '', '', 'to act as', '', 'to spare no effort', '', '', 'whole', '', 'I (modest word in letter)', '', '', '', 'to brandish', 'item', '', 'continuous', '', '', 'CL:個|个[ge4]', 'look', '', '(slang) butch (in a lesbian relationship)', 'to gain', '', 'passion', 'between', '', 'able to', 'west (old)', 'CL:個|个[ge4]', '', '', 'classifier for events, things, clothes etc', 'banknote', '', '', 'to hurry', 'speed', 'disease', 'abbr. for 意大利[Yi4 da4 li4]', 'oneself', '', '', 'only', '(onom.) bang', '', '', '', 'to give (as a present)', 'to announce', 'to develop (photo)', 'member', 'however', 'style', '', 'to dress', 'CL:條|条[tiao2],股[gu3]', 'grade', '', '', '', '', '', '', 'suitable', '', '(Tw) weight equal to 600 g', 'to let sb do sth', '', 'other', '', '', '', 'experiment', 'Good morning!', '', '', 'CL:門|门[men2]', '', 'for the benefit of', '', '', '', 'margin', 'common', 'variant of 考[kao3]', 'to share', '', 'to face', 'to use', 'approximately', '', '', 'to go in', 'remote', 'classifier for houses, small buildings, institutions etc', '', 'person engaged in certain types of work', '(old) rank in the imperial examinations', 'to chant', 'to call on sb', 'grade', '', '', '', 'pulp (of a fruit)', '', 'foreign', 'manual worker', 'late', 'in accordance with', 'indeed', '', '', 'crux (of a matter)', 'all right!', 'report', 'to breastfeed', '', '', 'to trifle with', 'commercial firm', 'forever', '', 'then', "to show (one's opinion)", '', '', '', '', 'then', '', 'CL:個|个[ge4]', 'up to', 'the second (day, time etc)', '', 'variant of 稀[xi1]', '', 'to sing', '', 'within a definite time or space', '', '', '', '', 'globe', '', 'to expect', 'classifier for beds', 'precious', 'matter', 'to displace', '', 'CL:隻|只[zhi1]', 'to run']
+    var hsk2_def4 = ['', '', '', 'since', '', '', '', '', '', '', 'polite appellation for an older male', '', 'to bounce', 'a few', 'to cease', '', '', 'to serve as', '', 'to show off or flaunt', '', '', 'complete', '', '', '', '', '', '', 'work', '', 'repeated', '', '', '', 'appearance', '', '', 'to catch (a disease)', '', 'situation', 'shell', '', 'to approve', '', '', '', '', '', 'CL:張|张[zhang1]', '', '', 'to rush', 'rate', 'to fall ill', '', 'personally', '', '', 'just (emphasis)', 'abbr. for 貼吧|贴吧[tie1 ba1]', '', '', '', 'to present (with)', 'to report', '', '', 'only', 'system', '', 'to bore through', 'principle', '', '', '', '', '', '', '', 'convenient', '', '(HK, Malaysia, Singapore) slightly over 604 g', 'to have sb do sth', '', 'side', '', '', '', 'examination', 'long ago', '', '', 'class', '', 'to give', '', '', '', 'border', 'international (e.g. high seas, metric system, calendar)', 'to inspect', 'together', '', 'to forge ahead (esp. in the face of difficulties)', 'to apply', '', '', '', 'to enter', '(intensifier in a comparison) by far', 'that which', '', 'person skilled in certain types of work', 'mansion', '', 'to find', 'equal to', '', '', '', '(coll.) (of a fruit) squashy', '', 'external', 'conscripted laborer (old)', '', 'in the light of', 'real', '', '', 'CL:隻|只[zhi1],雙|双[shuang1]', '(dialect) to add', 'newspaper', '', '', '', 'toy', 'line of business', 'always', '', 'afterwards', 'a model', '', '', '', '', 'only then', '', 'to be surnamed', 'to go', 'secondary', '', '', '', '', '', 'room', '', '', '', '', 'CL:個|个[ge4]', '', 'to visit', 'CL:張|张[zhang1]', '(honorific) your', 'to be engaged in', 'to touch', '', '(slang) prostitute', 'to move (of vehicle)']
 	var hsk2_rem = [...hsk2];
 	var hsk2_pinyin_rem = [...hsk2_pinyin];
 	var hsk2_def_rem = [...hsk2_def];
+	var hsk2_def2_rem = [...hsk2_def2];
+	var hsk2_def3_rem = [...hsk2_def3];
+	var hsk2_def4_rem = [...hsk2_def4];
 
 
 		var randomDiv = document.getElementById("myRandomDiv");
@@ -64,7 +79,9 @@
 		randomDiv.innerHTML = "二"; 
 		randomPinyinDiv.innerHTML= "èr";
 		randomDefDiv.innerHTML= "Two";
-		//一二三四五Yī'èrsānsìwǔ
+		var randomDef2Div = document.getElementById("myRandomDef2Div");		
+		var randomDef3Div = document.getElementById("myRandomDef3Div");		
+		var randomDef4Div = document.getElementById("myRandomDef4Div");	
 
 		document.getElementById("progressbar").setAttribute("aria-valuemax", hsk2.length)
 		document.getElementById("progressbar").setAttribute("aria-valuenow", 0)
@@ -100,9 +117,15 @@
 			  newText = hsk2_rem[randomIndex];
 			  newTextPinyin = hsk2_pinyin_rem[randomIndex];
 			  newTextDef = hsk2_def_rem[randomIndex];
+			  newTextDef2 = hsk2_def2_rem[randomIndex];
+			  newTextDef3 = hsk2_def3_rem[randomIndex];
+			  newTextDef4 = hsk2_def4_rem[randomIndex];
 			  randomDiv.innerHTML = newText;
 			  randomPinyinDiv.innerHTML = newTextPinyin;
 			  randomDefDiv.innerHTML = newTextDef;
+			  randomDef2Div.innerHTML = newTextDef2;
+			  randomDef3Div.innerHTML = newTextDef3;
+			  randomDef4Div.innerHTML = newTextDef4;
 			  
 			  increment();
 			  
@@ -111,10 +134,13 @@
 			    hsk2_rem=[...hsk2];
 				hsk2_pinyin_rem=[...hsk2_pinyin];
 				hsk2_def_rem=[...hsk2_def];
+				hsk2_def2_rem=[...hsk2_def2];
+				hsk2_def3_rem=[...hsk2_def3];
+				hsk2_def4_rem=[...hsk2_def4];
 				resetButton();
 
 			  }
-			  else {hsk2_rem.splice(hsk2_rem[randomIndex],1); hsk2_pinyin_rem.splice(hsk2_rem[randomIndex],1); hsk2_def_rem.splice(hsk2_rem[randomIndex],1);}
+			  else {hsk2_rem.splice(randomIndex,1); hsk2_pinyin_rem.splice(randomIndex,1); hsk2_def_rem.splice(randomIndex,1);}
             
 		}, true);
 	</script> 
